@@ -45,4 +45,5 @@ Route::post('gallery', 'GalleryController@postUpload');
 Route::post('gallery/delete', 'GalleryController@postDestroy');
 
 //Change Password
-Route::get('/changePassword','changePasswordController@showChangePasswordForm')
+Route::get('/changePassword','changePasswordController@showChangePasswordForm');
+Route::post('/changePassword','changePasswordController@changePassword')->name('changePassword');

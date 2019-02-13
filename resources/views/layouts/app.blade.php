@@ -70,7 +70,7 @@
 
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out  fa-lg  fa-fw"></i>Logout</a></li>
-                        <li><a href="{{ url('/password') }}"><i class="fa fa-cog fa-spin  fa-lg  fa-fw" ></i>Passwort ändern</a></li>
+                        <li><a href="{{ url('/changePassword') }}"><i class="fa fa-cog fa-spin  fa-lg  fa-fw" ></i>Passwort ändern</a></li>
                     </ul>
                 </li>
                 @endif
