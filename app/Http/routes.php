@@ -43,3 +43,6 @@ Route::delete('menu/{menu}', 'MenuController@destroy');
 Route::get('gallery', 'GalleryController@index');
 Route::post('gallery', 'GalleryController@postUpload');
 Route::post('gallery/delete', 'GalleryController@postDestroy');
+
+//Change Password
+Route::get('/changePassword','changePasswordController@showChangePasswordForm')
