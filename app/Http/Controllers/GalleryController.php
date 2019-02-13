@@ -10,8 +10,7 @@ use Image;
 
 class GalleryController extends Controller
 {
-    public function index()
-    {
+    public function index(){
         return Gallery::all();
     }
 
