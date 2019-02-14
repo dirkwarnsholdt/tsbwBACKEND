@@ -11,6 +11,12 @@
                     <li><a data-toggle="tab" href="#news">Neuigkeiten</a></li>
                     @endif
 
+                    @if ($activetab == "offer")
+                    <li class="active"><a data-toggle="tab" href="#offer">Angebots-Überschriften</a></li>
+                    @else
+                    <li><a data-toggle="tab" href="#offer">Angebots-Überschriften</a></li>
+                    @endif
+
                     @if ($activetab == "offer_detail")
                     <li class="active"><a data-toggle="tab" href="#offer_detail">Angebote</a></li>
                     @else
@@ -52,6 +58,14 @@
                     <div id="news" class="tab-pane fade">
                     @endif
                         @include('layouts.tables.news')
+                    </div>
+
+                    @if ($activetab == "offer")
+                    <div id="offer" class="tab-pane fade in active">
+                    @else
+                    <div id="offer" class="tab-pane fade">
+                    @endif
+                        @include('layouts.tables.offer')
                     </div>
 
                     @if ($activetab == "offer_detail")
@@ -96,6 +110,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
     </div>
     </div>

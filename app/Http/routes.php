@@ -14,6 +14,9 @@ Route::delete('news/{news}', 'NewsController@destroy');
 
 //Offer
 Route::get('offer', 'OfferController@index');
+Route::post('offer', 'OfferController@store');
+Route::patch('offer/{offer}', 'OfferController@update');
+Route::delete('offer/{offer}', 'OfferController@destroy');
 
 //Offer_Detail
 Route::get('offer_detail/{id}', 'OfferDetailController@index');
