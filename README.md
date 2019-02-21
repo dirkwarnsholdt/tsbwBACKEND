@@ -2,6 +2,7 @@ TODO:
 
 Fix:
 - **Trying to use POST-route instead of PATCH-route when changing diet** (Controller is okay, .blade is causing the trouble)
+- Reproduce TokenMismatchException and fix
 - Permissions
 
 Rework:
