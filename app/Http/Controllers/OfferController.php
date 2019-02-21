@@ -21,7 +21,6 @@ class OfferController extends Controller
     {
         $this->validate($request, array(
             'title' => 'required|max:255',
-            'content' => 'required'
         ));
 
         $offer->update($request->all());
