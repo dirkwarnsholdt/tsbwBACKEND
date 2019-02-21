@@ -1,6 +1,7 @@
 TODO:
 
 Fix:
+- **Trying to use POST-route instead of PATCH-route when changing diet** (Controller is okay, .blade is causing the trouble)
 - Permissions
 
 Rework:
