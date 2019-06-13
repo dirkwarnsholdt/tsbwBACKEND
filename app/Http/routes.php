@@ -43,7 +43,7 @@ Route::patch('menu/{menu}', 'MenuController@update');
 Route::delete('menu/{menu}', 'MenuController@destroy');
 
 //Menus displaying ALL entries (not just same Week like the one above)
-Route::get('menus', 'MenuController@giveAll');
+Route::get('menuALL', 'MenuController@giveAll');
 
 //Gallery
 Route::get('gallery', 'GalleryController@index');
