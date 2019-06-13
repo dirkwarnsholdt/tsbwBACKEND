@@ -36,11 +36,14 @@ Route::post('time', 'TimeController@store');
 Route::patch('time/{time}', 'TimeController@update');
 Route::delete('time/{time}', 'TimeController@destroy');
 
-//Speiseplan/Menu
+//Speiseplan/Menu => needs fix for PUT
 Route::get('menu', 'MenuController@index');
 Route::post('menu', 'MenuController@store');
 Route::patch('menu/{menu}', 'MenuController@update');
 Route::delete('menu/{menu}', 'MenuController@destroy');
+
+//Menus displaying ALL entries (not just same Week like the one above)
+Route::get('menus', 'MenuController@giveAll');
 
 //Gallery
 Route::get('gallery', 'GalleryController@index');
