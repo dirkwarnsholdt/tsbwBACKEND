@@ -63,5 +63,23 @@ class MenuController extends Controller
     	return Menu::all();
     }
 
+    public function giveCALENDAR()
+    {
+        $menu = Menu::all();
+        $Calendar = array();
+        foreach ($menu as $one_menu) {
+            if (date("W") > 4) {
+                if (date("W") - 3 <= date("W", strtotime($one_menu->date))) {
+                    array_push($Calendar, $one_menu);
+                }
+            }
+            else {
+                if ((date("n") == date("n", strtotime($one_menu->date)))) {
+                    array_push($Calendar, $one_menu);
+                }
+            }
+        }
 
+        return $Calendar;
+    }
 }
