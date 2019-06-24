@@ -44,6 +44,8 @@ Route::delete('menu/{menu}', 'MenuController@destroy');
 
 //Menus displaying ALL entries (not just same Week like the one above)
 Route::get('menuALL', 'MenuController@giveAll');
+//Everything up to 1 Month Backwards
+Route::get('menuCALENDAR', 'MenuController@giveCALENDAR');
 
 //Gallery
 Route::get('gallery', 'GalleryController@index');
