@@ -13,13 +13,13 @@ class WeatherFetchController extends Controller
         return Weather::all();
     }
 
-    public function store($json) {
+    public function store($request) {
         $weatherData = new Weather;
-        $weatherData->content = $json;
+        $weatherData->content = $request->content;
         $weatherData->save();
     }
 
-    public function update() {
-
+    public function update($request, $weatherData) {
+        $weatherData->update($request->all());
     }
 }
