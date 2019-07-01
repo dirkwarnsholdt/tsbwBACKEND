@@ -50,7 +50,7 @@ Route::get('menuCALENDAR', 'MenuController@giveCALENDAR');
 //Weather - Api
 Route::get('weather', 'WeatherFetchController@index');
 Route::post('weather', 'WeatherFetchController@store');
-Route::patch('weather/{weather}', 'WeatherFetchController@update');
+Route::patch('weather', 'WeatherFetchController@update');
 
 //Gallery
 Route::get('gallery', 'GalleryController@index');
