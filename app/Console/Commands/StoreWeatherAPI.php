@@ -44,6 +44,6 @@ class StoreWeatherAPI extends Command
         $request = Request::create('weather', 'POST', array(
             "content"   => $json
         ));
-        return Route::dispatch(Request $request)->getContent();
+        return Route::dispatch($request)->getContent();
     }
 }

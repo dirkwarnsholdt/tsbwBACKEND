@@ -14,7 +14,7 @@ class WeatherFetchController extends Controller
             ->get();
     }
 
-    public function store(Request $request) {
+    public function store($request) {
         $weatherData = new Weather;
         $weatherData->content = $request->content;
         $weatherData->save();
