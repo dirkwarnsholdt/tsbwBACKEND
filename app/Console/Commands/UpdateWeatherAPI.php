@@ -50,7 +50,7 @@ class UpdateWeatherAPI extends Command
                 // return Route::dispatch($request)->getContent();
             }
         } catch (Exception $e) {
-            echo('UPDATEweatherApi -- $json === empty')
+            echo('UPDATEweatherApi -- $json === empty');
             // only happens, when API
             // is having problems, so nothing I should
             // worry about :)
