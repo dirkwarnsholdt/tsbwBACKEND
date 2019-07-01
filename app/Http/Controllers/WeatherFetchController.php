@@ -10,7 +10,7 @@ use App\Http\Requests;
 class WeatherFetchController extends Controller
 {
     public function index() {
-        return $weatherData = Weather::table('content')->get();
+        return $weatherData = Weather->get();
     }
 
     public function store($request) {
