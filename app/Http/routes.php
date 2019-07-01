@@ -47,6 +47,9 @@ Route::get('menuALL', 'MenuController@giveAll');
 //Everything up to 1 Month Backwards
 Route::get('menuCALENDAR', 'MenuController@giveCALENDAR');
 
+//Weather - Api
+Route::get('weather', 'WeatherFetchController@giveHusum');
+
 //Gallery
 Route::get('gallery', 'GalleryController@index');
 Route::post('gallery', 'GalleryController@postUpload');
