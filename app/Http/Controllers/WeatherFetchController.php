@@ -10,7 +10,8 @@ use App\Http\Requests;
 class WeatherFetchController extends Controller
 {
     public function index() {
-        return $weatherData = Weather->get();
+        return $weatherData = Weather::orderBy('updated_at', 'desc')
+            ->get();
     }
 
     public function store($request) {
