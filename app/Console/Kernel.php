@@ -14,7 +14,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\Inspire::class,
-        Commands\UpdateWeatherAPI::class
+        Commands\UpdateWeatherAPI::class,
+        Commands\StoreWeatherAPI::class
     ];
 
     /**
@@ -27,7 +28,7 @@ class Kernel extends ConsoleKernel
     {
         // fetches new weather data, every 10 min
         // and stores into DB
-        $schedule->command('command:updateweatherapi')
-                ->everyTenMinutes();
+        // $schedule->command('command:updateweatherapi')
+                // ->everyTenMinutes();
     }
 }
