@@ -14,7 +14,7 @@ class WeatherFetchController extends Controller
         $fetch = file_get_contents($url);
         $json = json_decode($fetch);
 
-        return $json;
+        dd($json);
 
         // return $weatherData = Weather::orderBy('updated_at', 'desc')
         //     ->get();
