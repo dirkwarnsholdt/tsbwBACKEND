@@ -58,13 +58,18 @@ class UpdateWeatherToday extends Command
             // getting old file to overwrite
             try {
                 $oldJson = 'storage/weather/weatherToday.json'
-                if (file_exists($oldJson)) {
-
+                if (file_exists($oldJson) && isJson($json)) {
+                    if (unlink($oldJson)) {
+                        echo('oldJson deleted')
+                    }
+                    else {
+                        echo('Error deleting oldJson')
+                    }
                 }
-            }
+            } catch (Exception $e) { echo('ERROR oldJson-TryCatch')}
 
         } catch (Exception $e) {
-            echo('UPDATEweatherApi -- $json === empty');
+            echo('ERROR wrapper-tryCatch');
             // only happens, when API
             // is having problems, so nothing I should
             // worry about :)
