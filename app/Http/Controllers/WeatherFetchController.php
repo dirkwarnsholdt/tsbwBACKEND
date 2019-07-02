@@ -21,21 +21,21 @@ class WeatherFetchController extends Controller
         // }
 
 
-        // return $weatherData = Weather::orderBy('updated_at', 'desc')
-        //     ->get();
+        // return $weatherData = Weather::all
     }
 
-    public function store($request) {
-        $weatherData = new Weather;
-        $weatherData->content = $request->content;
-        $weatherData->save();
+    public function showToday() {
+        // return weatherToday.json
 
-        return;
     }
 
-    public function update(Request $request, Weather $weatherData) {
-        $weatherData->update($request->all());
+    public function storeToday() {
+        // initial dl of .json
+    }
 
+    public function updateToday() {
+        // download new -> then delete other
+        // everyTenMin -> fetch new /weatherToday
         return;
     }
 }
