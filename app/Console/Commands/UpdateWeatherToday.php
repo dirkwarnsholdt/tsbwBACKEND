@@ -55,8 +55,7 @@ class UpdateWeatherToday extends Command
             $url = 'http://api.openweathermap.org/data/2.5/weather?id=2897132&APPID=bda63977a6ec7a89b28153d79be9232f';
             $json = file_get_contents($url);
             file_put_contents('public/weather/weatherToday-TEMP.json', $json);
-            echo('REALPATH: ');
-            echo realpath('public/weather/weatherToday-TEMP.json');
+            $path = realpath('public/weather/');
 
             // getting old file to overwrite
             try {
@@ -64,7 +63,7 @@ class UpdateWeatherToday extends Command
                 if (file_exists($oldJson) && $this->isJson($json)) {
                     if (unlink($oldJson)) {
                         echo('oldJson deleted');
-                        rename('public/weather/weatherToday-TEMP', 'public/weather/weatherToday');
+                        rename($path . 'weatherToday-TEMP', $path . 'weatherToday');
                     }
                     else {
                         echo('Error deleting oldJson');
