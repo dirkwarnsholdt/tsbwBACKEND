@@ -15,17 +15,12 @@ class WeatherFetchController extends Controller
         $json = json_decode($fetch, true);
         echo("return: ". $json['wind']['speed']);
 
-        // $json = json_decode($fetch);
-        // if (!empty($json)) {
-        //     dd($json);
-        // }
-
-
         // return $weatherData = Weather::all
     }
 
     public function giveToday() {
-        // $path = '';
+        $path = 'storage/weather/weatherToday.json';
+        $json = file_get_contents($path);
     }
 
     public function storeToday() {
