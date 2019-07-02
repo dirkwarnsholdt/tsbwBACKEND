@@ -49,21 +49,27 @@ class UpdateWeatherToday extends Command
 
     public function handle()
     {
-
         // downloading and preparing json
         try {
+            $oldJson = 'public/weather/weatherToday.json';
             $url = 'http://api.openweathermap.org/data/2.5/weather?id=2897132&APPID=bda63977a6ec7a89b28153d79be9232f';
             $json = file_get_contents($url);
-            file_put_contents('public/weather/weatherToday-TEMP.json', $json);
             $path = realpath('public/weather/');
+
+            if (!file_exists($oldJson) && !empty($json)) {
+                file_put_contents('public/weather/weatherToday.json', $json);
+            }
+
+            if (!empty($json)) {
+                file_put_contents('public/weather/weatherToday-TEMP.json', $json);
+            }
 
             // getting old file to overwrite
             try {
-                $oldJson = 'public/weather/weatherToday.json';
                 if (file_exists($oldJson) && $this->isJson($json)) {
                     if (unlink($oldJson)) {
                         echo('oldJson deleted');
-                        rename($path . 'weatherToday-TEMP', $path . 'weatherToday');
+                        rename($path . 'weatherToday-TEMP.json', $path . 'weatherToday.json');
                     }
                     else {
                         echo('Error deleting oldJson');
