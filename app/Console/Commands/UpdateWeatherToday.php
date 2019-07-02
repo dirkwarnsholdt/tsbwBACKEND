@@ -66,7 +66,7 @@ class UpdateWeatherToday extends Command
                         echo('Error deleting oldJson');
                     }
                 }
-            } catch (Exception $e) { echo('ERROR oldJson-TryCatch')}
+            } catch (Exception $e) { echo('ERROR oldJson-TryCatch'); }
 
         } catch (Exception $e) {
             echo('ERROR wrapper-tryCatch');
