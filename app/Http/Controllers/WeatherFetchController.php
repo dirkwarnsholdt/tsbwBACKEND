@@ -29,7 +29,7 @@ class WeatherFetchController extends Controller
         } catch (Exception $e) {
             // idk what I should do now xd
         }
-
+        return $json
     }
 
     public function storeToday() {
