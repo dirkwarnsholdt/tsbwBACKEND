@@ -24,9 +24,8 @@ class WeatherFetchController extends Controller
         // return $weatherData = Weather::all
     }
 
-    public function showToday() {
-        // return weatherToday.json
-
+    public function giveToday() {
+        // $path = '';
     }
 
     public function storeToday() {

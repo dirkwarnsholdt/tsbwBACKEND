@@ -43,7 +43,7 @@ class UpdateWeatherToday extends Command
             $url = 'http://api.openweathermap.org/data/2.5/weather?id=2897132&APPID=bda63977a6ec7a89b28153d79be9232f';
             $json = file_get_contents($url);
 
-            file_put_contents('weatherToday.json', $json);
+            file_put_contents('storage/weather/weatherToday.json', $json);
 
         } catch (Exception $e) {
             echo('UPDATEweatherApi -- $json === empty');

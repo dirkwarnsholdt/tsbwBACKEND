@@ -49,9 +49,7 @@ Route::get('menuCALENDAR', 'MenuController@giveCALENDAR');
 
 //Weather
 //Today
-Route::get('weather', 'WeatherFetchController@index');
-Route::post('weather', 'WeatherFetchController@store');
-Route::patch('weather/{weather}', 'WeatherFetchController@update');
+Route::get('weather', 'WeatherFetchController@giveToday');
 
 //Gallery
 Route::get('gallery', 'GalleryController@index');
