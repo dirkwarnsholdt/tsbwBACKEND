@@ -19,7 +19,7 @@ class WeatherFetchController extends Controller
     }
 
     public function giveToday() {
-        $path = 'storage/weather/weatherToday.json';
+        $path = '~/weather/weatherToday.json';
         $json = file_get_contents($path);
     }
 
