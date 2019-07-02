@@ -61,6 +61,7 @@ class UpdateWeatherToday extends Command
                 if (file_exists($oldJson) && $this->isJson($json)) {
                     if (unlink($oldJson)) {
                         echo('oldJson deleted');
+                        rename(storage/weather/weatherToday-TEMP, storage/weather/weatherToday);
                     }
                     else {
                         echo('Error deleting oldJson');
