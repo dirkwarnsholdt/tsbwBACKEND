@@ -57,13 +57,13 @@ class UpdateWeatherToday extends Command
 
             // getting old file to overwrite
             try {
-                $oldJson = 'storage/weather/weatherToday.json'
+                $oldJson = 'storage/weather/weatherToday.json';
                 if (file_exists($oldJson) && isJson($json)) {
                     if (unlink($oldJson)) {
-                        echo('oldJson deleted')
+                        echo('oldJson deleted');
                     }
                     else {
-                        echo('Error deleting oldJson')
+                        echo('Error deleting oldJson');
                     }
                 }
             } catch (Exception $e) { echo('ERROR oldJson-TryCatch')}
