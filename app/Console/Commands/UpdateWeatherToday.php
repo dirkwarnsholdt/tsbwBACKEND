@@ -13,7 +13,7 @@ class UpdateWeatherToday extends Command
      *
      * @var string
      */
-    protected $signature = 'command:weatherToday';
+    protected $signature = 'command:UpdateWeatherToday';
 
     /**
      * The console command description.
