@@ -42,13 +42,8 @@ class UpdateWeatherAPI extends Command
         try {
             $url = 'http://api.openweathermap.org/data/2.5/weather?id=2897132&APPID=bda63977a6ec7a89b28153d79be9232f';
             $json = file_get_contents($url);
-            if (!empty($json)) {
-                $request = Request::create('weather', 'PATCH', array(
-                    "content"   => $json
-                ));
-                return Route::dispatch($request)->getContent();
-                // return Route::dispatch($request)->getContent();
-            }
+            file_put_contents('./weather/weatherToday.json', $json)
+
         } catch (Exception $e) {
             echo('UPDATEweatherApi -- $json === empty');
             // only happens, when API

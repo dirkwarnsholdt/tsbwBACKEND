@@ -47,7 +47,8 @@ Route::get('menuALL', 'MenuController@giveAll');
 //Everything up to 1 Month Backwards
 Route::get('menuCALENDAR', 'MenuController@giveCALENDAR');
 
-//Weather - Api
+//Weather
+//Today
 Route::get('weather', 'WeatherFetchController@index');
 Route::post('weather', 'WeatherFetchController@store');
 Route::patch('weather/{weather}', 'WeatherFetchController@update');
