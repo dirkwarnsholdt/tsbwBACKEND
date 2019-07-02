@@ -21,7 +21,7 @@ class WeatherFetchController extends Controller
     public function giveToday() {
         $path = '/var/www/html/tsbwAPP/public/weather/';
         try {
-            if (file_get_contents($path . 'weatherToday.json')) {
+            if (!file_get_contents($path . 'weatherToday.json')) {
                 $json = file_get_contents($path . 'weatherToday-TEMP.json');
             } else {
                 $json = file_get_contents($path . 'weatherToday.json');
