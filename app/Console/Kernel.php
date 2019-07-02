@@ -14,8 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\Inspire::class,
-        Commands\UpdateWeatherAPI::class,
-        Commands\StoreWeatherAPI::class
+        Commands\UpdateWeatherToday::class,
     ];
 
     /**
