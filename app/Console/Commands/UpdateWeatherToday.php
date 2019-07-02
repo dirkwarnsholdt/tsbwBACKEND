@@ -6,14 +6,14 @@ use Illuminate\Console\Command;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-class UpdateWeatherAPI extends Command
+class UpdateWeatherToday extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'command:updateweatherapi';
+    protected $signature = 'command:weatherToday';
 
     /**
      * The console command description.
