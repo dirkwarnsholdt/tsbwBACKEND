@@ -11,14 +11,14 @@ class UpdateWeatherForecast extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'command:updateweatherforecast';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Fetches new Data for /weatherForecast every 10 Minutes';
 
     /**
      * Create a new command instance.
