@@ -41,7 +41,6 @@ Route::get('menu', 'MenuController@index');
 Route::post('menu', 'MenuController@store');
 Route::patch('menu/{menu}', 'MenuController@update');
 Route::delete('menu/{menu}', 'MenuController@destroy');
-
 //Menus displaying ALL entries (not just same Week like the one above)
 Route::get('menuALL', 'MenuController@giveAll');
 //Everything up to 1 Month Backwards
@@ -50,6 +49,8 @@ Route::get('menuCALENDAR', 'MenuController@giveCALENDAR');
 //Weather
 //Today
 Route::get('weatherToday', 'WeatherFetchController@giveToday');
+//Forecast
+Route::get('weatherForecast', 'WeatherFetchController@giveForecast');
 
 //Gallery
 Route::get('gallery', 'GalleryController@index');
