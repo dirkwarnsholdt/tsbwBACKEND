@@ -32,6 +32,20 @@ class WeatherFetchController extends Controller
         return $json;
     }
 
+    public function giveForecast() {
+        $path = '/var/www/html/tsbwAPP/public/weather/';
+        try {
+            if (!file_get_contents($path . 'weatherForecast.json')) {
+                $json = file_get_contents($path . 'weatherForecast-TEMP.json');
+            } else {
+                $json = file_get_contents($path . 'weatherForecast.json');
+            }
+        } catch (Exception $e) {
+            // idk what I should do now xd
+        }
+        return $json;
+    }
+
     public function storeToday() {
         // initial dl of .json
     }
