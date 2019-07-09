@@ -35,6 +35,15 @@ class UpdateWeatherForecast extends Command
      *
      * @return mixed
      */
+    
+    public function isJson($json) {
+        $result = json_decode($json);
+        if (json_last_error() === JSON_ERROR_NONE) {
+            return true;
+        }
+        return false;
+    }
+    
     public function handle()
     {
         // downloading and preparing json
