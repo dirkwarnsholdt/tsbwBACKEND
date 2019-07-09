@@ -11,7 +11,7 @@ class UpdateWeatherForecast extends Command
      *
      * @var string
      */
-    protected $signature = 'command:updateweatherforecast';
+    protected $signature = 'command:UpdateWeatherForecast';
 
     /**
      * The console command description.
