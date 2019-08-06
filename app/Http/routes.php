@@ -47,7 +47,7 @@ Route::get('menuALL', 'MenuController@giveAll');
 Route::get('menuCALENDAR', 'MenuController@giveCALENDAR');
 
 //Quotes
-Route::get('quotes', 'QuoteController@giveAll');
+Route::get('quotesALL', 'QuoteController@giveAll');
 
 //Weather
 //Today
