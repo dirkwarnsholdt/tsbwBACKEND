@@ -9,7 +9,6 @@ use App\Http\Requests;
 
 class QuoteController extends Controller
 {
-\public\quotes\quotes.js
     public function giveAll() {
         $path = '/var/www/html/tsbwAPP/public/quotes/';
         try {
