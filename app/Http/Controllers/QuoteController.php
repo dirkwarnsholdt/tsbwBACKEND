@@ -12,10 +12,8 @@ class QuoteController extends Controller
     public function giveAll() {
         $path = '/var/www/html/tsbwAPP/public/quotes/';
         try {
-            $json = file_get_contents($path . 'quotes.js')
-        } catch (Exception $e) {
-
-        }
+            $json = file_get_contents($path . 'quotes.js');
+        } catch (Exception $e) {}
         return $json;
     }
 }
