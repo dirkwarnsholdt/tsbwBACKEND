@@ -135,11 +135,19 @@
                 </div>
 
                 <div>
-                    Deklaration-Zusatzstoffe:
-                    1.Farbstoffe, 2.Konservierungsstoffe, 3.Antioxidationsmittel, 4.Geschmacksverstärker, 5.geschwefelt, 6.geschwärzt, 7.mit Nitrat, 8.mit Süßungsmittel, 9.mit einer Zuckerart u. Süßungsmittel, 10.Coffeinhaltig ,11 Chininhaltig, 12 mit Phosphat, 13 gewachst, 14 enthält eine Phenylalaninquelle, 15.mit Milcheiweiß (Fleischerzeugnis)
+                    <h1>
+                        Deklaration-Zusatzstoffe:
+                    </h1>
+                    <p>
+                        1.Farbstoffe, 2.Konservierungsstoffe, 3.Antioxidationsmittel, 4.Geschmacksverstärker, 5.geschwefelt, 6.geschwärzt, 7.mit Nitrat, 8.mit Süßungsmittel, 9.mit einer Zuckerart u. Süßungsmittel, 10.Coffeinhaltig ,11 Chininhaltig, 12 mit Phosphat, 13 gewachst, 14 enthält eine Phenylalaninquelle, 15.mit Milcheiweiß (Fleischerzeugnis)
+                    </p>
 
-                    Deklaration Allergene:
+                    <h1>
+                        Deklaration Allergene:
+                    </h1>
+                    <p>
                     a. Gluten, b. Krebstiere, c .Eier, d. Fisch, e .Erdnüsse, f. Soja, g. Milch, h. Schalenfrüchte, i. Sellerie, j Senf, k. Sesam, l .Schwefeldioxid und Sulfate >10 mg/kg, m. Lupine, n. Weichtiere
+                    </p>
                 </div>
 
             </div>
