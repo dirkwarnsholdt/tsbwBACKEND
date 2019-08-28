@@ -145,21 +145,21 @@
                         Deklaration-Zusatzstoffe:
                     </h2>
                     <ol style="list-style: none;">
-                        <li><strong>1.</strong>Farbstoffe </li>
-                        <li><strong>2.</strong>Konservierungsstoffe </li>
-                        <li><strong>3.</strong>Antioxidationsmittel </li>
-                        <li><strong>4.</strong>Geschmacksverstärker </li>
-                        <li><strong>5.</strong>geschwefelt </li>
-                        <li><strong>6.</strong>geschwärzt </li>
-                        <li><strong>7.</strong>mit Nitrat </li>
-                        <li><strong>8.</strong>mit Süßungsmittel </li>
-                        <li><strong>9.</strong>mit einer Zuckerart u. Süßungsmittel </li>
-                        <li><strong>10.</strong>Coffeinhaltig </li>
-                        <li><strong>11.</strong>Chininhaltig </li>
-                        <li><strong>12.</strong>mit Phosphat </li>
-                        <li><strong>13.</strong>gewachst </li>
-                        <li><strong>14.</strong>enthält eine Phenylalaninquelle </li>
-                        <li><strong>15.</strong>mit Milcheiweiß (Fleischerzeugnis) </li>
+                        <li><strong>1.</strong> Farbstoffe </li>
+                        <li><strong>2.</strong> Konservierungsstoffe </li>
+                        <li><strong>3.</strong> Antioxidationsmittel </li>
+                        <li><strong>4.</strong> Geschmacksverstärker </li>
+                        <li><strong>5.</strong> geschwefelt </li>
+                        <li><strong>6.</strong> geschwärzt </li>
+                        <li><strong>7.</strong> mit Nitrat </li>
+                        <li><strong>8.</strong> mit Süßungsmittel </li>
+                        <li><strong>9.</strong> mit einer Zuckerart u. Süßungsmittel </li>
+                        <li><strong>10.</strong> Coffeinhaltig </li>
+                        <li><strong>11.</strong> Chininhaltig </li>
+                        <li><strong>12.</strong> mit Phosphat </li>
+                        <li><strong>13.</strong> gewachst </li>
+                        <li><strong>14.</strong> enthält eine Phenylalaninquelle </li>
+                        <li><strong>15.</strong> mit Milcheiweiß (Fleischerzeugnis) </li>
                     </ol>
 
                     <h2>
