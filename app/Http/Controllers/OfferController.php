@@ -52,7 +52,6 @@ class OfferController extends Controller
     {
         $hasError = false;
         try {
-            deletePicture($offer->id, "offer");
             $offer->delete();
         } catch (\Illuminate\Database\QueryException $e) {
             $hasError = !$hasError;
@@ -60,6 +59,7 @@ class OfferController extends Controller
             return redirect('/');
         }
         if (!$hasError) {
+            deletePicture($offer->id, "offer");
             Session::flash('success', 'Der Eintrag wurde erfolgreich gelöscht!');
             return redirect('/#offer');
         }

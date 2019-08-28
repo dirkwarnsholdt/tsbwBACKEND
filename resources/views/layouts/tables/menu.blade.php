@@ -2,7 +2,7 @@
 <div class="container col-md-12">
     <br>
     <script src="{{ url('/js/jquery.pajinate.js') }}"></script>
-    
+
     <script type="text/javascript">
         $(document).ready(function () {
             $('#paging_container1').pajinate(
@@ -133,6 +133,15 @@
                     <input type="text" class="form-control" id="nachtisch-input" name="nachtisch"
                     maxlength="250" required>
                 </div>
+
+                <div>
+                    Deklaration-Zusatzstoffe:
+                    1.Farbstoffe, 2.Konservierungsstoffe, 3.Antioxidationsmittel, 4.Geschmacksverstärker, 5.geschwefelt, 6.geschwärzt, 7.mit Nitrat, 8.mit Süßungsmittel, 9.mit einer Zuckerart u. Süßungsmittel, 10.Coffeinhaltig ,11 Chininhaltig, 12 mit Phosphat, 13 gewachst, 14 enthält eine Phenylalaninquelle, 15.mit Milcheiweiß (Fleischerzeugnis)
+
+                    Deklaration Allergene:
+                    a. Gluten, b. Krebstiere, c .Eier, d. Fisch, e .Erdnüsse, f. Soja, g. Milch, h. Schalenfrüchte, i. Sellerie, j Senf, k. Sesam, l .Schwefeldioxid und Sulfate >10 mg/kg, m. Lupine, n. Weichtiere
+                </div>
+
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o" aria-hidden="true"></i>&ensp;Speichern

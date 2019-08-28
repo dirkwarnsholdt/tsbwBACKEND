@@ -18,7 +18,7 @@ class changePasswordController extends Controller
 
     public function changePassword(Request $request){
         if (!(Hash::check($request->get('current-password'), Auth::user()->password))) {
-            // The passwords matches
+            // The passwords dont match
             return redirect()->back()->with("error","Your current password does not matches with the password you provided. Please try again.");
         }
         if(strcmp($request->get('current-password'), $request->get('new-password')) == 0){
