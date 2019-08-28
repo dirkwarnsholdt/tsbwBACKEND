@@ -135,19 +135,51 @@
                 </div>
 
                 <div>
+
+                    <hr>
+
                     <h2>
                         Deklaration-Zusatzstoffe:
                     </h2>
-                    <p>
-                        1.Farbstoffe, 2.Konservierungsstoffe, 3.Antioxidationsmittel, 4.Geschmacksverstärker, 5.geschwefelt, 6.geschwärzt, 7.mit Nitrat, 8.mit Süßungsmittel, 9.mit einer Zuckerart u. Süßungsmittel, 10.Coffeinhaltig ,11 Chininhaltig, 12 mit Phosphat, 13 gewachst, 14 enthält eine Phenylalaninquelle, 15.mit Milcheiweiß (Fleischerzeugnis)
-                    </p>
+                    <ol>
+                        <li> Farbstoffe </li>
+                        <li> Konservierungsstoffe </li>
+                        <li> Antioxidationsmittel </li>
+                        <li> Geschmacksverstärker </li>
+                        <li> geschwefelt </li>
+                        <li> geschwärzt </li>
+                        <li> mit Nitrat </li>
+                        <li> mit Süßungsmittel </li>
+                        <li> mit einer Zuckerart u. Süßungsmittel </li>
+                        <li> Coffeinhaltig </li>
+                        <li> Chininhaltig </li>
+                        <li> mit Phosphat </li>
+                        <li> gewachst </li>
+                        <li> enthält eine Phenylalaninquelle </li>
+                        <li> mit Milcheiweiß (Fleischerzeugnis) </li>
+                    </ol>
 
                     <h2>
                         Deklaration Allergene:
                     </h2>
-                    <p>
-                    a. Gluten, b. Krebstiere, c .Eier, d. Fisch, e .Erdnüsse, f. Soja, g. Milch, h. Schalenfrüchte, i. Sellerie, j Senf, k. Sesam, l .Schwefeldioxid und Sulfate >10 mg/kg, m. Lupine, n. Weichtiere
-                    </p>
+
+                     <ul style="list-style: none;">
+                        <li><strong>a.</strong> Gluten</li>
+                        <li><strong>b.</strong> Krebstiere</li>
+                        <li><strong>c.</strong> Eier</li>
+                        <li><strong>d.</strong> Fisch</li>
+                        <li><strong>e.</strong> Erdnüsse</li>
+                        <li><strong>f.</strong> Soja</li>
+                        <li><strong>g.</strong> Milch</li>
+                        <li><strong>h.</strong> Schalenfrüchte</li>
+                        <li><strong>i.</strong> Sellerie</li>
+                        <li><strong>j.</strong> Senf</li>
+                        <li><strong>k.</strong> Sesam</li>
+                        <li><strong>l.</strong> Schwefeldioxid und Sulfate >10 mg/kg</li>
+                        <li><strong>m.</strong> Lupine</li>
+                        <li><strong>n.</strong> Weichtiere</li>
+                    </ul>
+
                 </div>
 
             </div>
