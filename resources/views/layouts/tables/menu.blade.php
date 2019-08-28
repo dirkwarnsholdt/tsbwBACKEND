@@ -141,22 +141,22 @@
                     <h2>
                         Deklaration-Zusatzstoffe:
                     </h2>
-                    <ol>
-                        <li> Farbstoffe </li>
-                        <li> Konservierungsstoffe </li>
-                        <li> Antioxidationsmittel </li>
-                        <li> Geschmacksverstärker </li>
-                        <li> geschwefelt </li>
-                        <li> geschwärzt </li>
-                        <li> mit Nitrat </li>
-                        <li> mit Süßungsmittel </li>
-                        <li> mit einer Zuckerart u. Süßungsmittel </li>
-                        <li> Coffeinhaltig </li>
-                        <li> Chininhaltig </li>
-                        <li> mit Phosphat </li>
-                        <li> gewachst </li>
-                        <li> enthält eine Phenylalaninquelle </li>
-                        <li> mit Milcheiweiß (Fleischerzeugnis) </li>
+                    <ol style="list-style: none;">
+                        <li><strong>1.</strong>Farbstoffe </li>
+                        <li><strong>2.</strong>Konservierungsstoffe </li>
+                        <li><strong>3.</strong>Antioxidationsmittel </li>
+                        <li><strong>4.</strong>Geschmacksverstärker </li>
+                        <li><strong>5.</strong>geschwefelt </li>
+                        <li><strong>6.</strong>geschwärzt </li>
+                        <li><strong>7.</strong>mit Nitrat </li>
+                        <li><strong>8.</strong>mit Süßungsmittel </li>
+                        <li><strong>9.</strong>mit einer Zuckerart u. Süßungsmittel </li>
+                        <li><strong>10.</strong>Coffeinhaltig </li>
+                        <li><strong>11.</strong>Chininhaltig </li>
+                        <li><strong>12.</strong>mit Phosphat </li>
+                        <li><strong>13.</strong>gewachst </li>
+                        <li><strong>14.</strong>enthält eine Phenylalaninquelle </li>
+                        <li><strong>15.</strong>mit Milcheiweiß (Fleischerzeugnis) </li>
                     </ol>
 
                     <h2>
