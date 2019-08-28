@@ -2,7 +2,7 @@
 <div class="container col-md-12">
     <br>
     <script src="{{ url('/js/jquery.pajinate.js') }}"></script>
-    
+
     <script type="text/javascript">
         $(document).ready(function () {
             $('#paging_container1').pajinate(
