@@ -135,6 +135,9 @@
                 </div>
 
                 <div>
+                    <p>
+                        Bitte Deklarations- & Inhaltsstoffe Kürzel in Klammern mit angeben => z.B. '(1,2,6,8,a,d,f,g)'
+                    </p>
 
                     <hr>
 
