@@ -12,18 +12,18 @@ class InfoController extends Controller
 {
     public function index()
     {
-        return $news = Info::orderBy('updated_at', 'desc')->get();
+        return $infos = Info::orderBy('updated_at', 'desc')->get();
     }
 
-    public function update(Request $request, Info $news)
+    public function update(Request $request, Info $infos)
     {
         $this->validate($request, array(
             'title' => 'required|max:255',
             'content' => 'required'
         ));
 
-        $news->edited_by = Auth::User()->id;
-        $news->update($request->all());
+        $infos->edited_by = Auth::User()->id;
+        $infos->update($request->all());
 
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
 
@@ -37,24 +37,20 @@ class InfoController extends Controller
             'content' => 'required'
         ));
 
-        $news = new Info;
-        $news->title = $request->title;
-        $news->content = $request->content;
-        $news->edited_by = Auth::User()->id;
-        $news->save();
-
-        uploadPicture(Input::file('file_0'), $news->id, "news");
-
+        $infos = new Info;
+        $infos->title = $request->title;
+        $infos->content = $request->content;
+        $infos->edited_by = Auth::User()->id;
+        $infos->save();
 
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
         return back();
 
     }
 
-    public function destroy(Info $news)
+    public function destroy(Info $infos)
     {
-        deletePicture($news->id, "news");
-        $news->delete();
+        $infos->delete();
         Session::flash('success', 'Der Eintrag wurde erfolgreich gelöscht!');
         return back();
     }
