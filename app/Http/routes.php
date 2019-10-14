@@ -7,10 +7,10 @@ Route::get('/home', 'TableController@index');
 Route::get('/', 'TableController@index');
 
 //Info
-Route::get('infos', 'InfoController@index');
-Route::post('infos', 'InfoController@store');
-Route::patch('infos/{infos}', 'InfoController@update');
-Route::delete('infos/{infos}', 'InfoController@destroy');
+Route::get('info', 'InfoController@index');
+Route::post('info', 'InfoController@store');
+Route::patch('info/{info}', 'InfoController@update');
+Route::delete('info/{info}', 'InfoController@destroy');
 
 //News
 Route::get('news', 'NewsController@index');
