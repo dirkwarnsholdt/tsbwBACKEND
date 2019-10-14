@@ -1,15 +1,16 @@
-<!-- Table infos-->
-<div class="container col-md-12">
-    <br>
-    <div>
-        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal" data-target="#model-infos-0">
-            <span class="fa fa-plus-square" aria-hidden="true"></span>&ensp;Neuer Eintrag
+    <!-- Table info-->
+    <div class="container col-md-12">
+        <br>
+        <div>
+            <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal"
+            data-target="#model-info-0"><span class="fa fa-plus-square" aria-hidden="true"></span>&ensp;Neuer
+            Eintrag
         </button>
     </div>
     <!-- Modal -->
-    <form method="POST" action="infos" id="create" files=true enctype="multipart/form-data">
+    <form method="POST" action="info" id="create" files=true enctype="multipart/form-data">
         {{ csrf_field() }}
-        <div class="modal fade" id="model-infos-0" tabindex="" role="dialog"
+        <div class="modal fade" id="model-info-0" tabindex="" role="dialog"
         aria-labelledby="myModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
@@ -28,6 +29,23 @@
                         <label for="textblock-0">Text:</label>
                         <textarea class="form-control noresize" id="textblock-0" rows="10" required
                         name="content"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="dropdown">Angebot von:</label>
+                        <select name="offer" size="1">
+                            @foreach($offer as $one_offer)
+                            <option value="{{$one_offer->id}}">{{$one_offer->title}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="btn btn-primary btn-file">
+                            <span class="glyphicon glyphicon-save"></span>
+                            Neues Bild hochladen <input type="file" name="file_0"
+                            accept=".bmp, .gif, .jpeg, .jpg, .png"
+                            style="display: none;">
+                        </label>
+                        <h4><span class="label label-default download-pic col-md-pull-1"></span></h4>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -53,70 +71,93 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($infos as $one_infos)
+        @foreach($info as $one_info)
         <!-- Tablerow -->
         <tr>
-            <td data-toggle="modal" data-target="#model-infos-{{ $one_infos->id }}"
-                class="td-title"> {{ $one_infos->title }} </td>
-                <td data-toggle="modal" data-target="#model-infos-{{ $one_infos->id }}"
-                    class="td-content"> {{ $one_infos->content }} </td>
+            <td data-toggle="modal" data-target="#model-info-{{ $one_info->id }}"
+                class="td-title"> {{ $one_info->title }} </td>
+                <td data-toggle="modal" data-target="#model-info-{{ $one_info->id }}"
+                    class="td-content"> {{ $one_info->content }} </td>
 
                     <td class="trash">
                         <button type="button" class="btn btn-error" data-toggle="modal"
-                        data-target="#delete-modal-infos-{{ $one_infos->id }}"><span
+                        data-target="#delete-modal-info-{{ $one_info->id }}"><span
                         class="glyphicon glyphicon-trash"></span>
                     </button>
-                    <div class="modal fade" tabindex="-1" role="dialog" id="delete-modal-infos-{{ $one_infos->id }}">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                        aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title">Möchten Sie diesen Eintrag wirklich löschen?</h4>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <form method="POST" action="infos/{{ $one_infos->id }}" id="delete">
-                                            {{ csrf_field() }}
-                                            {{ method_field('DELETE') }}
-                                            <button type="submit" class="btn btn-danger">Eintrag löschen</button>
-                                        </form>
-                                    </div>
+                    <div class="modal fade" tabindex="-1" role="dialog"
+                    id="delete-modal-info-{{ $one_info->id }}">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title">Möchten Sie diesen Eintrag wirklich löschen?</h4>
+                                </div>
+                                <div class="modal-footer">
+                                    <form method="POST" action="info/{{ $one_info->id }}" id="delete">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button type="submit" class="btn btn-danger">Eintrag löschen</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                    </td>
-                </tr>
+                    </div>
+                </td>
+            </tr>
 
-                <!-- Modal -->
-                <form method="POST" action="infos/{{ $one_infos->id }}" files=true enctype="multipart/form-data">
-                    {{ csrf_field() }}
-                    {{ method_field('PATCH') }}
-                    <div class="modal fade" id="model-infos-{{ $one_infos->id }}" tabindex="" role="dialog"
-                       aria-labelledby="myModalLabel"
-                       aria-hidden="true">
-                       <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"
-                                aria-hidden="true">&times;</button>
-                                <h4 class="modal-title" id="myModalLabel">Eintrag bearbeiten</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="titel-{{ $one_infos->id }}">Titel:</label>
-                                    <input type="text" class="form-control" id="titel-{{ $one_infos->id }}" name="title"
-                                    value="{{$one_infos->title}}" maxlength="250" required>
+            <!-- Modal -->
+            <form method="POST" action="info/{{ $one_info->id }}" files=true
+              enctype="multipart/form-data">
+              {{ csrf_field() }}
+              {{ method_field('PATCH') }}
+              <div class="modal fade" id="model-info-{{ $one_info->id }}" tabindex="" role="dialog"
+               aria-labelledby="myModalLabel"
+               aria-hidden="true">
+               <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Eintrag bearbeiten</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="titel-{{ $one_info->id }}">Titel:</label>
+                            <input type="text" class="form-control" id="titel-{{ $one_info->id }}"
+                            name="title"
+                            value="{{$one_info->title}}" maxlength="250" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="textblock">Text:</label>
+                            <textarea class="form-control noresize" id="textblock" rows="10" required
+                            name="content">{{$one_info->content}}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="dropdown">Angebot von:</label>
+                            <select name="offer" size="1">
+                                @foreach($offer as $one_offer)
+                                @if ($one_info->offerid == $one_offer->id)
+                                <option value="{{$one_offer->id}}" selected="selected">
+                                    @else
+                                    <option value="{{$one_offer->id}}">
+                                        @endif
+                                        {{$one_offer->title}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="textblock">Text:</label>
-                                    <textarea class="form-control noresize" id="textblock" rows="10" required
-                                    name="content">{{$one_infos->content}}</textarea>
+                                    <label for="pic">Bild:</label>
+                                    <img src="files/info_{{ $one_info->id }}.jpg" class="img-responsive"
+                                    alt="Kein Bild vorhanden"
+                                    onerror="this.onerror=null;this.src='./files/placeholder.png';">
                                 </div>
+
                             </div>
                             <div class="modal-footer">
-                                <p>Eintrag erstellt: {{ ($one_infos->created_at->format('d.m.Y H:i:s')) }}<br>
-                                    Eintrag bearbeitet: {{ ($one_infos->updated_at->format('d.m.Y H:i:s')) }}
-                                    von {{ $one_infos->getUser->name }}</p>
+                                <p>Eintrag erstellt: {{ ($one_info->created_at->format('d.m.Y H:i:s')) }}<br>
+                                    Eintrag bearbeitet: {{ ($one_info->updated_at->format('d.m.Y H:i:s')) }}
+                                    von {{ $one_info->getUser->name }}</p>
                                     <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o"
                                        aria-hidden="true"></i>&ensp;Speichern
                                    </button>
