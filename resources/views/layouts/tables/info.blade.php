@@ -30,23 +30,6 @@
                         <textarea class="form-control noresize" id="textblock-0" rows="10" required
                         name="content"></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="dropdown">Angebot von:</label>
-                        <select name="offer" size="1">
-                            @foreach($offer as $one_offer)
-                            <option value="{{$one_offer->id}}">{{$one_offer->title}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="btn btn-primary btn-file">
-                            <span class="glyphicon glyphicon-save"></span>
-                            Neues Bild hochladen <input type="file" name="file_0"
-                            accept=".bmp, .gif, .jpeg, .jpg, .png"
-                            style="display: none;">
-                        </label>
-                        <h4><span class="label label-default download-pic col-md-pull-1"></span></h4>
-                    </div>
                 </div>
                 <div class="modal-footer">
                     <p></p>
@@ -133,26 +116,6 @@
                             <textarea class="form-control noresize" id="textblock" rows="10" required
                             name="content">{{$one_info->content}}</textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="dropdown">Angebot von:</label>
-                            <select name="offer" size="1">
-                                @foreach($offer as $one_offer)
-                                @if ($one_info->offerid == $one_offer->id)
-                                <option value="{{$one_offer->id}}" selected="selected">
-                                    @else
-                                    <option value="{{$one_offer->id}}">
-                                        @endif
-                                        {{$one_offer->title}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="pic">Bild:</label>
-                                    <img src="files/info_{{ $one_info->id }}.jpg" class="img-responsive"
-                                    alt="Kein Bild vorhanden"
-                                    onerror="this.onerror=null;this.src='./files/placeholder.png';">
-                                </div>
-
                             </div>
                             <div class="modal-footer">
                                 <p>Eintrag erstellt: {{ ($one_info->created_at->format('d.m.Y H:i:s')) }}<br>
