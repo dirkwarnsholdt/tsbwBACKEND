@@ -6,6 +6,12 @@ Route::auth();
 Route::get('/home', 'TableController@index');
 Route::get('/', 'TableController@index');
 
+//Info
+Route::get('info', 'InfoController@index');
+Route::post('info', 'InfoController@store');
+Route::patch('info/{info}', 'InfoController@update');
+Route::delete('info/{info}', 'InfoController@destroy');
+
 //News
 Route::get('news', 'NewsController@index');
 Route::post('news', 'NewsController@store');

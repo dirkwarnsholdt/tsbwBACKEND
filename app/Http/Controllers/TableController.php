@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Http\Requests;
 use Intervention\Image\ImageManagerStatic as Image;
+use App\Info;
 use App\News;
 use App\Offer;
 use App\OfferDetail;
@@ -27,6 +28,7 @@ class TableController extends Controller
         $startweek = $monday - (604800 * 3);
         $activetab = "";
 
+        $info = Info::all()->sortBy('title');
         $news = News::all()->sortByDesc('updated_at');
         $offer_detail = OfferDetail::all()->sortByDesc('updated_at');
         $offer = Offer::all()->sortBy('title');
@@ -45,10 +47,11 @@ class TableController extends Controller
         // } else if (Gate::allows('see-menu')) {
             // $activetab = "menu";
         // };
-		
+
 		$activetab="news";
-		
+
         return view('home', [
+            "info" => $info,
             "news" => $news,
             "offer_detail" => $offer_detail,
             "offer" => $offer,

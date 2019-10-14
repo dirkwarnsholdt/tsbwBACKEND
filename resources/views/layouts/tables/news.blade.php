@@ -2,8 +2,9 @@
 <div class="container col-md-12">
     <br>
     <div>
-        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal" data-target="#model-news-0">
-            <span class="fa fa-plus-square" aria-hidden="true"></span>&ensp;Neuer Eintrag
+        <button type="button" class="btn btn-primary col-xs-offset-10" data-toggle="modal"
+        data-target="#model-news-0"><span class="fa fa-plus-square" aria-hidden="true"></span>&ensp;Neuer
+        Eintrag
         </button>
     </div>
     <!-- Modal -->
