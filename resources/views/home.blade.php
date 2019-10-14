@@ -5,6 +5,12 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <ul class="nav nav-tabs">
+                    @if ($activetab == "info")
+                    <li class="active"><a data-toggle="tab" href="#info">Zentrale/Info</a></li>
+                    @else
+                    <li><a data-toggle="tab" href="#info">Zentrale/Info</a></li>
+                    @endif
+
                     @if ($activetab == "news")
                     <li class="active"><a data-toggle="tab" href="#news">Neuigkeiten</a></li>
                     @else
@@ -35,13 +41,13 @@
                     <li><a data-toggle="tab" href="#time">Öffnungszeiten</a></li>
                     @endif
 
-                    
+
                     @if ($activetab == "menu")
                     <li class="active"><a data-toggle="tab" href="#menu">Speiseplan</a></li>
                     @else
                     <li><a data-toggle="tab" href="#menu">Speiseplan</a></li>
                     @endif
-                    
+
 
                     @if ($activetab == "gallery")
                        <li class="active"><a data-toggle="tab" href="#gallery">Gallerie</a></li>
@@ -51,6 +57,14 @@
 
                 </ul>
                 <div class="tab-content">
+
+                    @if ($activetab == "info")
+                    <div id="info" class="tab-pane fade in active">
+                    @else
+                    <div id="info" class="tab-pane fade">
+                    @endif
+                        @include('layouts.tables.info')
+                    </div>
 
                     @if ($activetab == "news")
                     <div id="news" class="tab-pane fade in active">
