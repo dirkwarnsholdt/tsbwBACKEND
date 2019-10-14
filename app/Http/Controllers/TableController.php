@@ -25,7 +25,8 @@ class TableController extends Controller
     public function index()
     {
         $monday = strtotime('monday this week');
-        $startweek = $monday - (604800 * 3);
+        // $startweek = $monday - (604800 * 3);
+        $startweek = $monday;
         $activetab = "";
 
         $info = Info::all()->sortBy('title');
