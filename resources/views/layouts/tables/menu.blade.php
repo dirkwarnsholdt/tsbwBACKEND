@@ -24,7 +24,7 @@
             <div class="pajinate_page_navigation container col-md-12 text-center"></div>
 
             <ul class="pajinate_content">
-                @for ($i = 1; $i < 8 * 24; $i++)
+                @for ($i = 22; $i < 8 * 24; $i++)
                 <!-- 86400 => 24h   |   604800 => 7d -->
                 {{--*/ $date = date("d.m.Y",$today + (86400 * ($i - 1)) + (604800 * 0) ) /*--}}
                 {{--*/ $date_long = date("Y-m-d H:i:s",$today + (86400 * ($i - 1)) + (604800 * 0) ) /*--}}
