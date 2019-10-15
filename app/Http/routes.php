@@ -66,14 +66,19 @@ Route::get('gallery', 'GalleryController@index');
 Route::post('gallery', 'GalleryController@postUpload');
 Route::post('gallery/delete', 'GalleryController@postDestroy');
 
-//Reza
+//Reza - Content
 Route::get('reza1', 'RezaController@giveFirst');
 Route::get('reza2', 'RezaController@giveSecond');
 Route::get('reza3', 'RezaController@giveThird');
 Route::get('reza4', 'RezaController@giveFourth');
 Route::get('reza5', 'RezaController@giveFifth');
 
-
+//Reza - Image
+Route::get('reza1_img', 'RezaController@giveFirstImage');
+Route::get('reza2_img', 'RezaController@giveSecondImage');
+Route::get('reza3_img', 'RezaController@giveThirdImage');
+Route::get('reza4_img', 'RezaController@giveFourthImage');
+Route::get('reza5_img', 'RezaController@giveFifthImage');
 
 //Change Password
 Route::get('/changePassword','changePasswordController@showChangePasswordForm');
