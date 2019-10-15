@@ -66,6 +66,15 @@ Route::get('gallery', 'GalleryController@index');
 Route::post('gallery', 'GalleryController@postUpload');
 Route::post('gallery/delete', 'GalleryController@postDestroy');
 
+//Reza
+Route::get('reza1', 'RezaController@giveFirst');
+Route::get('reza2', 'RezaController@giveSecond');
+Route::get('reza3', 'RezaController@giveThird');
+Route::get('reza4', 'RezaController@giveFourth');
+Route::get('reza5', 'RezaController@giveFifth');
+
+
+
 //Change Password
 Route::get('/changePassword','changePasswordController@showChangePasswordForm');
 Route::post('/changePassword','changePasswordController@changePassword')->name('changePassword');
