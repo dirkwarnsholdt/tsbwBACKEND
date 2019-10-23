@@ -24,10 +24,15 @@
             <div class="pajinate_page_navigation container col-md-12 text-center"></div>
 
             <ul class="pajinate_content">
-                @for ($i = 1; $i < 8 * 4; $i++)
-                <!-- 86400 => 24h   |   604800 => 7d -->
-                {{--*/ $date = date("d.m.Y",$today + (86400 * ($i - 1)) + (604800 * 0) ) /*--}}
-                {{--*/ $date_long = date("Y-m-d H:i:s",$today + (86400 * ($i - 1)) + (604800 * 0) ) /*--}}
+                {{--*/ $timezone = date_default_timezone_get() /*--}}
+                {{--*/ date_default_timezone_set($timezone) /*--}}
+                {{--*/ $dateToday = date('d.m.Y', strtotime('Monday this week')) /*--}}
+
+                    @for ($i = 0; $i < 8 * 4; $i++)
+                        <!-- 86400s => 24h   |   604800s => 7d -->
+                        {{--*/  $date = date('d.m.Y', strtotime($dateToday .'+'. ($i - 1) .'day')) /*--}}
+                        {{--*/ $date_long = date("Y-m-d H:i:s",strtotime($dateToday .'+'. ($i - 1) .'day')) /*--}}
+
                 <li>
                     <p>
                         <strong>
