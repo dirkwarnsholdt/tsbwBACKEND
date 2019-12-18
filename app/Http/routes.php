@@ -6,6 +6,11 @@ Route::auth();
 Route::get('/home', 'TableController@index');
 Route::get('/', 'TableController@index');
 
+// \
+Route::get('/test', function() {
+  return File::get(public_path() . '/app/Datenschutzerklärung.html');
+});
+
 //Info
 Route::get('info', 'InfoController@index');
 Route::post('info', 'InfoController@store');
