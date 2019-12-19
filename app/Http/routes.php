@@ -6,8 +6,8 @@ Route::auth();
 Route::get('/home', 'TableController@index');
 Route::get('/', 'TableController@index');
 
-// \
-Route::get('/test', function() {
+// For GooglePlayStore
+Route::get('/datenschutz', function() {
   return File::get(public_path() . '/app/Datenschutzerklärung.html');
 });
 
