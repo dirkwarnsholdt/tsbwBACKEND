@@ -85,6 +85,9 @@ Route::get('reza3_img', 'RezaController@giveThirdImage');
 Route::get('reza4_img', 'RezaController@giveFourthImage');
 Route::get('reza5_img', 'RezaController@giveFifthImage');
 
+//Logout
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 //Change Password
 Route::get('/changePassword','changePasswordController@showChangePasswordForm');
 Route::post('/changePassword','changePasswordController@changePassword')->name('changePassword');
