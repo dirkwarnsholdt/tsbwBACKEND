@@ -24,14 +24,17 @@
             <div class="pajinate_page_navigation container col-md-12 text-center"></div>
 
             <ul class="pajinate_content">
-                {{--*/ $timezone = date_default_timezone_get() /*--}}
-                {{--*/ date_default_timezone_set($timezone) /*--}}
-                {{--*/ $dateToday = date('d.m.Y', strtotime('Monday this week')) /*--}}
-
-                    @for ($i = 0; $i < 8 * 4; $i++)
+            @php
+                 $timezone = date_default_timezone_get();
+                 date_default_timezone_set($timezone);
+                 $dateToday = date('d.m.Y', strtotime('Monday this week'));
+            @endphp
+                     @for ($i = 0; $i < 8 * 4; $i++)
                         <!-- 86400s => 24h   |   604800s => 7d -->
-                        {{--*/  $date = date('d.m.Y', strtotime($dateToday .'+'. ($i - 1) .'day')) /*--}}
-                        {{--*/ $date_long = date("Y-m-d H:i:s",strtotime($dateToday .'+'. ($i - 1) .'day')) /*--}}
+            @php
+                        $date = date('d.m.Y', strtotime($dateToday .'+'. ($i - 1) .'day'));
+                        $date_long = date("Y-m-d H:i:s",strtotime($dateToday .'+'. ($i - 1) .'day'));
+            @endphp
 
                 <li>
                     <p>
