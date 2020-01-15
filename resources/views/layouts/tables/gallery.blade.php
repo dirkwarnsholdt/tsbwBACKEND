@@ -9,7 +9,7 @@
     <form action="gallery" method="post" enctype="multipart/form-data"
     class="dropzone"
     id="my-awesome-dropzone" name="file">
-    <input type="hidden" name="_token" value="{{csrf_token()}}">
+    {{ csrf_field() }}
 </form>
 {{--Dropzone Preview Template--}}
 
