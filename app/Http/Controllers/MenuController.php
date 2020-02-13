@@ -22,18 +22,21 @@ class MenuController extends Controller
         return $Woche;
     }
 
-    public function update(Request $request, Menu $menu)
+    public function update(Request $request, $id)
     {
         $this->validate($request, array(
             'vollkost' => 'required'
         ));
+
+        $menu = Menu::find($id);
+
         $menu->update($request->all());
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
 
         return redirect('/#menu');
     }
 
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
         $this->validate($request, array(
             'vollkost' => 'required'
@@ -51,8 +54,9 @@ class MenuController extends Controller
 
     }
 
-    public function destroy(Menu $menu)
+    public function destroy($id)
     {
+        $menu = Menu::find($id);
         $menu->delete();
         Session::flash('success', 'Der Eintrag wurde erfolgreich gelöscht!');
         return redirect('/#menu');
