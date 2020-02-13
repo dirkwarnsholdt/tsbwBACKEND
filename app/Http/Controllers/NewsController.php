@@ -46,8 +46,6 @@ class NewsController extends Controller
         $news->edited_by = Auth::User()->id;
         $news->save();
 
-        dd($news->id);
-
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
         return back();
 

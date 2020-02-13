@@ -49,7 +49,6 @@ class PersonController extends Controller
 
         uploadPicture(Input::file('file_0'), $person->id, "person");
 
-
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
         return redirect('/#person');
 

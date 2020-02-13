@@ -45,8 +45,6 @@ class InfoController extends Controller
         $info->edited_by = Auth::User()->id;
         $info->save();
 
-        dd($info->id);
-
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
         return back();
 
