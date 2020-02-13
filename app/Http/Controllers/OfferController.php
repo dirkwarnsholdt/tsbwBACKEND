@@ -17,12 +17,13 @@ class OfferController extends Controller
         return Offer::all();
     }
 
-    public function update(Request $request, offer $offer)
+    public function update(Request $request, $id)
     {
         $this->validate($request, array(
             'title' => 'required|max:255',
         ));
 
+        $offer = Offer::find($id);
         $offer->update($request->all());
 
         uploadPicture(Input::file('file'), $offer->id, "offer");
@@ -48,8 +49,9 @@ class OfferController extends Controller
         return redirect('/#offer');
     }
 
-    public function destroy(Offer $offer)
+    public function destroy($id)
     {
+        $offer = Offer::find($id);
         $hasError = false;
         try {
             $offer->delete();
