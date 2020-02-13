@@ -15,8 +15,10 @@ class InfoController extends Controller
         return $info = Info::orderBy('updated_at', 'desc')->get();
     }
 
-    public function update(Request $request, Info $info)
+    public function update(Request $request, $id)
     {
+        $info = Info::find($id);
+
         $this->validate($request, array(
             'title' => 'required|max:255',
             'content' => 'required'
@@ -43,13 +45,16 @@ class InfoController extends Controller
         $info->edited_by = Auth::User()->id;
         $info->save();
 
+        dd($info->id);
+
         Session::flash('success', 'Der Eintrag wurde erfolgreich gespeichert!');
         return back();
 
     }
 
-    public function destroy(Info $info)
+    public function destroy($id)
     {
+        $info = Info::find($id);
         $info->delete();
         Session::flash('success', 'Der Eintrag wurde erfolgreich gelöscht!');
         return back();
