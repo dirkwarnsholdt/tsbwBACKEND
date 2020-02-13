@@ -13,16 +13,17 @@ class OfferDetailController extends Controller
     public function index($id)
     {
         return OfferDetail::where('offerid', $id)
-            ->orderBy('updated_at', 'desc')
-            ->get();
+            ->sortBy('title');
     }
 
-    public function update(Request $request, OfferDetail $offer_detail)
+    public function update(Request $request, $id)
     {
         $this->validate($request, array(
             'title' => 'required|max:255',
             'content' => 'required'
         ));
+
+        $offer_detail = OfferDetail::find($id);
 
         $offer_detail->edited_by = Auth::User()->id;
         $offer_detail->offerid = $request->input('offer');
@@ -57,8 +58,9 @@ class OfferDetailController extends Controller
 
     }
 
-    public function destroy(OfferDetail $offer_detail)
+    public function destroy($id)
     {
+        $offer_detail = OfferDetail::find($id);
         deletePicture($offer_detail->id, "offer_detail");
         $offer_detail->delete();
         Session::flash('success', 'Der Eintrag wurde erfolgreich gelöscht!');
