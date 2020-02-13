@@ -29,12 +29,12 @@ class TableController extends Controller
         $startweek = $monday;
         $activetab = "";
 
-        $info = Info::all()->sortBy('title');
+        $info = Info::all()->sortByDesc('updated_at');
         $news = News::all()->sortByDesc('updated_at');
-        $offer_detail = OfferDetail::all()->sortByDesc('updated_at');
+        $offer_detail = OfferDetail::all()->sortBy('title');
         $offer = Offer::all()->sortBy('title');
         $person = Person::all()->sortBy('title');
-        $time = Time::all()->sortBy('title');
+        $time = Time::all()->sortByDesc('title');
         $menu = Menu::all()->sortBy('date')->keyBy('date');
 
         // if (Gate::allows('see-news')) {

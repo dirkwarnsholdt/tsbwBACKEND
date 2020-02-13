@@ -48,13 +48,6 @@
                     <li><a data-toggle="tab" href="#menu">Speiseplan</a></li>
                     @endif
 
-
-                    @if ($activetab == "gallery")
-                       <li class="active"><a data-toggle="tab" href="#gallery">Gallerie</a></li>
-                    @else
-                       <li><a data-toggle="tab" href="#gallery">Gallerie</a></li>
-                    @endif
-
                 </ul>
                 <div class="tab-content">
 

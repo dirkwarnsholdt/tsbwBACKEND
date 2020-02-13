@@ -12,16 +12,17 @@ class TimeController extends Controller
 {
     public function index()
     {
-        return $time = Time::orderBy('updated_at', 'desc')
-            ->get();
+        return $time = Time::sortBy('title');
     }
 
-    public function update(Request $request, Time $time)
+    public function update(Request $request, $id)
     {
         $this->validate($request, array(
             'title' => 'required|max:255',
             'content' => 'required'
         ));
+
+        $time = Time::find($id);
 
         $time->edited_by = Auth::User()->id;
         $time->update($request->all());
@@ -54,8 +55,9 @@ class TimeController extends Controller
 
     }
 
-    public function destroy(Time $time)
+    public function destroy($id)
     {
+        $time = Time::find($id);
         deletePicture($time->id, "Time");
         $time->delete();
         Session::flash('success', 'Der Eintrag wurde erfolgreich gelöscht!');
