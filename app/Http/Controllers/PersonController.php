@@ -12,16 +12,17 @@ class PersonController extends Controller
 {
     public function index()
     {
-        return $person = Person::orderBy('updated_at', 'desc')
-            ->get();
+        return $person = Person::sortBy('title');
     }
 
-    public function update(Request $request, Person $person)
+    public function update(Request $request, $id)
     {
         $this->validate($request, array(
             'title' => 'required|max:255',
             'content' => 'required'
         ));
+
+        $person = Person::find($id);
 
         $person->edited_by = Auth::User()->id;
         $person->update($request->all());
@@ -54,8 +55,9 @@ class PersonController extends Controller
 
     }
 
-    public function destroy(Person $person)
+    public function destroy($id)
     {
+        $person = Person::find($id);
         deletePicture($person->id, "person");
         $person->delete();
         Session::flash('success', 'Der Eintrag wurde erfolgreich gelöscht!');
