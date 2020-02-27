@@ -12,7 +12,7 @@ class PersonController extends Controller
 {
     public function index()
     {
-        return $person = Person::sortBy('title');
+        return $person = Person::orderBy('title')->get();
     }
 
     public function update(Request $request, $id)
