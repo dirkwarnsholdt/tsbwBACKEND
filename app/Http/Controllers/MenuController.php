@@ -36,8 +36,10 @@ class MenuController extends Controller
         return redirect('/#menu');
     }
 
-    public function store(Request $request, $id)
+    public function store(Request $request)
     {
+        $id = $request->id;
+
         $this->validate($request, array(
             'vollkost' => 'required'
         ));
