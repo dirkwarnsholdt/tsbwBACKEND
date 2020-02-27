@@ -13,7 +13,8 @@ class OfferDetailController extends Controller
     public function index($id)
     {
         return OfferDetail::where('offerid', $id)
-            ->sortBy('title');
+            ->orderBy('title')
+            ->get();
     }
 
     public function update(Request $request, $id)
