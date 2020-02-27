@@ -12,7 +12,7 @@ class TimeController extends Controller
 {
     public function index()
     {
-        return $time = Time::sortBy('title');
+        return $time = Time::orderBy('title')->get();
     }
 
     public function update(Request $request, $id)
